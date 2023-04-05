@@ -1,0 +1,133 @@
+/* Bar 2 */
+.content_bar input[type="text"] {
+    width: 300px;
+    height: auto;
+}
+
+.content_bar input[type="date"] {
+    width: 210px;
+}
+
+.content_bar input[type="date"]::before {
+    content: attr(data-placeholder);
+    width: 100%;
+}
+
+.content_bar input {
+    position: relative;
+}
+
+.content_bar input[type="date"]::-webkit-calendar-picker-indicator {
+    background-position: right;
+    padding: 12px;
+    background-size: auto;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+.form-select:focus {
+    border-color: gray;
+    outline: 0;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.10) !important;
+}
+.d_input {
+    width: 70px;
+}
+/* Table */
+.content_table table {
+    width: 100%;
+    height: auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    border: 1.5px solid #e7e8fb;
+}
+
+.content_table td, .content_table th {
+    border: solid 1px #e7e8fb;
+    border-style: none solid solid none;
+    padding: 10px;
+}
+
+.content_table tr:first-child td:first-child {
+    border-top-left-radius: 10px;
+}
+
+.content_table tr:first-child td:last-child {
+    border-top-right-radius: 10px;
+}
+
+.content_table tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+.content_table tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+.content_table tr:first-child td {
+    border-top-style: solid;
+}
+
+.content_table tr td:first-child {
+    border-left-style: solid;
+}
+.checked tr td {
+    background-color: #ffe6cc;
+}
+.content_table td i {
+    color: #ff8000;
+}
+
+/* Checkbox */
+.content_table input[type="checkbox"]:checked {
+    color: white;
+}
+
+.content_table input[type="checkbox"] {
+    content: "\00a0";
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1.5px solid gray;
+    border-radius: 5px;
+    color: white;
+    display: inline-block;
+    font: 16px/1em sans-serif;
+    height: 16px;
+    width: 16px;
+    overflow: hidden;
+}
+
+.content_table input[type="checkbox"]:after {
+    position: relative;
+}
+
+.content_table input[type="checkbox"]:checked:after {
+    display: block;
+    background: #ff8000;
+    color: white;
+    content: "\2713";
+    text-align: center;            
+    border-radius: 3px;
+}
+.selected {
+    background-color: #ffe6cc;
+}
+/* Table Change */
+.change_btn button {
+    color: #ff8000;
+    font-size: 20px;
+    padding: 5px 15px;
+}
+/* Modal */
+.add_item {
+    font-size: 20px;
+}

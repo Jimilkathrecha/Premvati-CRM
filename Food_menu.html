@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="/CSS/global.css">
+    <link rel="stylesheet" href="/CSS/Stock-in.css">
+    <link rel="stylesheet" href="/CSS/food_menu.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <!-- Bootstarp Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous">
+        </script>
+    <!-- Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- Download PDF -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+</head>
+
+<body>
+
+    <section class="body_content d-flex">
+         <!-- Menubar -->
+         <section class="menubar bg-white position-fixed">
+            <div class="menubar_con position-relative p-1">
+                <div class="menu_list">
+                    <ul>
+                        <a href="">
+                            <li class="py-2 m-1">
+                                <img class="orange_icon" src="/img/premvati_icons/Dash board orange.png">
+                                <img class="mx-auto white_icon" src="/img/premvati_icons/Dash board white.png">
+                                Dashboard
+                            </li>
+                        </a>
+                        <a href="Stock-in.html">
+                            <li class="py-2 m-1">
+                                <img class="orange_icon" src="/img/premvati_icons/Stock in orange.png"> 
+                                <img class="mx-auto white_icon" src="/img/premvati_icons/Stock in white.png">
+                                Stock In
+                            </li>
+                        </a>
+                        <a href="Stock-out.html">
+                            <li class="py-2 m-1">
+                                <img class="orange_icon" src="/img/premvati_icons/Stock out orange.png"> 
+                                <img class="mx-auto white_icon" src="/img/premvati_icons/Stock out white.png">
+                                Stock Out
+                            </li>
+                        </a>
+                        <a href="order_req.html">
+                            <li class="py-2 m-1">
+                                <img class="orange_icon" src="/img/premvati_icons/order_req_orange.png"> 
+                                <img class="mx-auto white_icon" src="/img/premvati_icons/order_req_white.png">
+                                Order Request
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="py-2 m-1">
+                                <img class="orange_icon" src="/img/premvati_icons/Accounting orange.png"> 
+                                <img class="mx-auto white_icon" src="/img/premvati_icons/Accounting White.png">
+                                Accounting
+                            </li>
+                        </a>
+                        <a class="active_menubar" href="Food_menu.html">
+                            <li class="py-2 m-1">
+                                <img class="orange_icon" src="/img/premvati_icons/food menu orange.png"> 
+                                <img class="mx-auto white_icon" src="/img/premvati_icons/food menu white.png">
+                                Food Menu
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="py-2 m-1">
+                                <img class="orange_icon" src="/img/premvati_icons/Transaction orange.png">
+                                <img class="mx-auto white_icon" src="/img/premvati_icons/Transaction White.png"> 
+                                Transaction
+                            </li>
+                        </a>
+                        <a href="Users.html">
+                            <li class="py-2 m-1">
+                                <img class="orange_icon" src="/img/premvati_icons/user orange.png"> 
+                                <img class="mx-auto white_icon" src="/img/premvati_icons/user White.png">
+                                Users
+                            </li>
+                        </a>
+                        <a href="Feedback.html">
+                            <li class="py-2 m-1">
+                                <img class="orange_icon" src="/img/premvati_icons/Feedback orange.png"> 
+                                <img class="mx-auto white_icon" src="/img/premvati_icons/Feedback white.png">
+                                Feedback
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div id="fixed_bg_1"></div>
+
+        <!-- Content -->
+        <section class="content">
+            <div class="py-4 px-5">
+                <div class="d-flex justify-content-between">
+                    <h3 class="mt-2"><b> Jay Swaminarayan </b></h3>
+                    <div class="content_bar">
+                        <input class="border rounded-2 p-2" type="text" id="myInput"
+                            placeholder="Search the item by name or ItemCode" />
+                        <button type="button" class="button_bg p-2 px-4 border-0 rounded-2 text-white"> Search
+                        </button>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-wrap">
+
+                    <div class="rounded-3 p-3 d-flex m-3 product">
+                        <img class="rounded-3" src="https://source.unsplash.com/random/81x80/?sandwich" alt="">
+                        <div class="px-3">
+                            <h5>Cheese Sandwich</h5>
+                            <strong>Rs. 59/ 2pc</strong>
+                            <div class="d-flex justify-content-between">
+                                <p>12 available</p>
+                                <p>8 sold</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-3 p-3 d-flex m-3 product">
+                        <img class="rounded-3" src="https://source.unsplash.com/random/81x81/?pizza" alt="">
+                        <div class="px-3">
+                            <h5>Veg Cheese Pizza</h5>
+                            <strong>Rs. 59/ 2pc</strong>
+                            <div class="d-flex justify-content-between">
+                                <p>12 available</p>
+                                <p>8 sold</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-3 p-3 d-flex m-3 product">
+                        <img class="rounded-3" src="https://source.unsplash.com/random/80x80/?sandwich" alt="">
+                        <div class="px-3">
+                            <h5>Cheese Sandwich</h5>
+                            <strong>Rs. 59/ 2pc</strong>
+                            <div class="d-flex justify-content-between">
+                                <p>12 available</p>
+                                <p>8 sold</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-3 p-3 d-flex m-3 product">
+                        <img class="rounded-3" src="https://source.unsplash.com/random/80x80/?pizzas" alt="">
+                        <div class="px-3">
+                            <h5>Margherita Pizza</h5>
+                            <strong>Rs. 59/ 2pc</strong>
+                            <div class="d-flex justify-content-between">
+                                <p>12 available</p>
+                                <p>8 sold</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-3 p-3 d-flex m-3 product">
+                        <img class="rounded-3" src="https://source.unsplash.com/random/81x80/?sandwich" alt="">
+                        <div class="px-3 pro_details">
+                            <h5>Cheese Sandwich</h5>
+                            <strong>Rs. 59/ 2pc</strong>
+                            <div class="d-flex justify-content-between">
+                                <p>12 available</p>
+                                <p>8 sold</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-3 p-3 d-flex m-3 product">
+                        <img class="rounded-3" src="https://source.unsplash.com/random/80x79/?pizzas" alt="">
+                        <div class="px-3 pro_details">
+                            <h5>Margherita Pizza</h5>
+                            <strong>Rs. 59/ 2pc</strong>
+                            <div class="d-flex justify-content-between">
+                                <p>12 available</p>
+                                <p>8 sold</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-3 p-3 d-flex m-3 product">
+                        <img class="rounded-3" src="https://source.unsplash.com/random/80x80/?pizza" alt="">
+                        <div class="px-3">
+                            <h5>Veg Mexican Pizza</h5>
+                            <strong>Rs. 59/ 2pc</strong>
+                            <div class="d-flex justify-content-between">
+                                <p>12 available</p>
+                                <p>8 sold</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-3 p-3 d-flex m-3 product">
+                        <img class="rounded-3" src="https://source.unsplash.com/random/79x80/?sandwich" alt="">
+                        <div class="px-3 pro_details">
+                            <h5>Cheese Sandwich</h5>
+                            <strong>Rs. 59/ 2pc</strong>
+                            <div class="d-flex justify-content-between">
+                                <p>12 available</p>
+                                <p>8 sold</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-3 p-3 d-flex m-3 product">
+                        <img class="rounded-3" src="https://source.unsplash.com/random/79x79/?pizzas" alt="">
+                        <div class="px-3 pro_details">
+                            <h5>Margherita Pizza</h5>
+                            <strong>Rs. 59/ 2pc</strong>
+                            <div class="d-flex justify-content-between">
+                                <p>12 available</p>
+                                <p>8 sold</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-3 p-3 d-flex m-3 product">
+                        <img class="rounded-3" src="https://source.unsplash.com/random/82x80/?pizza" alt="">
+                        <div class="px-3">
+                            <h5>Veg Mexican Pizza</h5>
+                            <strong>Rs. 59/ 2pc</strong>
+                            <div class="d-flex justify-content-between">
+                                <p>12 available</p>
+                                <p>8 sold</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-3 p-3 d-flex m-3 product">
+                        <img class="rounded-3" src="https://source.unsplash.com/random/82x82/?pizza" alt="">
+                        <div class="px-3">
+                            <h5>Veg Mexican Pizza</h5>
+                            <strong>Rs. 59/ 2pc</strong>
+                            <div class="d-flex justify-content-between">
+                                <p>12 available</p>
+                                <p>8 sold</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-3 p-3 d-flex m-3 product">
+                        <img class="rounded-3" src="https://source.unsplash.com/random/80x82/?sandwich" alt="">
+                        <div class="px-3">
+                            <h5>Cheese Sandwich</h5>
+                            <strong>Rs. 59/ 2pc</strong>
+                            <div class="d-flex justify-content-between">
+                                <p>12 available</p>
+                                <p>8 sold</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3rd Column -->
+        <section>
+            <div class="column_3 bg-white px-3 py-4">
+                <div class="d-flex justify-content-between">
+                    <p>Order Number</p>
+                    <h4>124</h4>
+                    <button type="button" class="btn bg-white py-1 px-2 m-1 position-relative">
+                        <i class="fa-regular fa-bell fs-5 px-1"></i>
+                        <span
+                            class="button_bg position-absolute top-0 start-100 translate-middle px-2 text-white border border-light rounded-circle"
+                            style="font-size: 14px;">
+                            1 <span class="visually-hidden"></span>
+                        </span>
+                    </button>
+                </div>
+                <div class="search_input px-2">
+                    <input class="border rounded-2 p-2" type="text" placeholder="Search Code">
+                </div>
+           
+                    <div class="d-flex mx-auto mt-3">
+                        <img class="rounded-3" src="https://source.unsplash.com/random/80x80/?food/?Pizzas" alt="">
+                        <div class="product_content py-2 px-2">
+                            <h5>Cheese Sandwich</h5>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <strong>Rs. 59</strong>
+                                </div>
+                                <div>
+                                    <table>
+                                        <td class="table__text qty-group">
+                                            <button class="value-button" id="decrease" data-quantity-decrease
+                                                disabled><i class="fa-solid fa-minus"></i></button>
+                                            <input class="border-0" id="output-area" data-quantity-input value="1">
+                                            <button class="value-button button_bg" id="increase"
+                                                data-quantity-increase><i class="fa-solid fa-plus"></i></button>
+                                        </td>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex mx-auto mt-3">
+                        <img class="rounded-3" src="https://source.unsplash.com/random/80x80/?food/?pizzas" alt="">
+                        <div class="product_content py-2 px-2">
+                            <h5>Cheese Pizza</h5>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <strong>Rs. 159</strong>
+                                </div>
+                                <div>
+                                    <table>
+                                        <td class="table__text qty-group">
+                                            <button class="value-button" id="decrease" data-quantity-decrease
+                                                disabled><i class="fa-solid fa-minus"></i></button>
+                                            <input class="border-0" id="output-area" data-quantity-input value="1">
+                                            <button class="value-button" id="increase"
+                                                data-quantity-increase><i class="fa-solid fa-plus"></i></button>
+                                        </td>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex mx-auto mt-3">
+                        <img class="rounded-3" src="https://source.unsplash.com/random/80x80/?food/?burger" alt="">
+                        <div class="product_content py-2 px-2">
+                            <h5>Burger</h5>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <strong>Rs. 100</strong>
+                                </div>
+                                <div>
+                                    <table>
+                                        <td class="table__text qty-group">
+                                            <button class="value-button" id="decrease" data-quantity-decrease
+                                                disabled><i class="fa-solid fa-minus"></i></button>
+                                            <input class="border-0" id="output-area" data-quantity-input value="1">
+                                            <button class="value-button" id="increase"
+                                                data-quantity-increase><i class="fa-solid fa-plus"></i></button>
+                                        </td>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="place_order_btn mt-3">
+                        <button class="button_bg text-white border-0 rounded-2 px-5 py-2 fs-5">Place Order</button>
+                    </div>
+         
+            </div>
+        </section>
+        <div id="fixed_bg_2"></div>
+    </section>
+
+    <!------------------>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>

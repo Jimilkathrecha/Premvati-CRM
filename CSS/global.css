@@ -1,0 +1,131 @@
+/* Basic CSS */
+root {
+    --default-font: 'Montserrat';
+    --col-bg: #f6f6f6;
+    --org: #ff8000;
+    --col-lorg: #ffe6cc;
+    --col-red: #db3f3f;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--default-font);
+}
+
+/* Basic CSS end */
+.body_content {
+    width: 100%;
+    height: auto;
+}
+
+/* Side Menu */
+.menubar {
+    width: 7%;
+    height: 100%;
+    min-width: 110px;
+}
+
+.menubar_con {
+    min-width: 110px;
+    width: 5%;
+    height: calc(100vh - 7%);
+    overflow-y: scroll;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+    left: 30px;
+    top: 27px;
+    bottom: 50px;
+    bottom: 10px;
+    border: 2px solid #ff8000;
+    border-radius: 15px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.10);
+}
+
+.menubar_con::-webkit-scrollbar {
+    display: none;
+}
+
+.menubar_con {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.menu_list ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.menu_list a {
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+}
+
+.menu_list img {
+    width: 60px;
+    height: auto;
+}
+
+.white_icon {
+    display: none;
+}
+.active_menubar li {
+    background-color: #ff8000;
+    border-radius: 8px;
+    color: white !important;
+}
+.active_menubar .orange_icon {
+    display: none;
+}
+.active_menubar .white_icon {
+    display: block;
+}
+.menu_list li:hover {
+    background-color: #ff8000;
+    border-radius: 8px;
+    color: white !important;
+    transition: 0.5s;
+}
+.menu_list li:hover .orange_icon {
+    display: none;
+}
+.menu_list li:hover .white_icon {
+    display: block;
+    transition: 0.5s;
+}
+#fixed_bg_1 {
+    width: 7%;
+    height: 100vh;
+    min-width: 140px;
+}
+/* Side Menu end */
+/* Bar */
+.menu_list_bar {
+    border-radius: 10px;
+    background-color: white;
+    /* border: 1px solid rgba(0,0,0,0.2); */
+    /* border: solid 1px #e7e8fb; */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.20);
+    /* box-shadow: 1px 0 1px #888; */
+}
+.active li {
+    background-color: #ff8000;
+    border-radius: 8px;
+    color: white !important;
+}
+/* Contect */
+.content {
+    width: 100%;
+    height: 100vh;
+}
+/* Contect end */
+
+/* Button bg */
+.button_bg {
+    background-color: #ff8000;
+}

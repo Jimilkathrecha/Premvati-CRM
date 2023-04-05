@@ -1,0 +1,60 @@
+.search_input input {
+    width: 100%;
+}
+/* Content */
+.product {
+    width: 334px;
+    height: 130px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.20);
+    background-color: white;
+}
+.product h5 {
+    font-size: 19px;
+}
+.product:hover {
+    background-color: #ff8000;
+    transition: 0.5s;
+    color: white;
+}
+.pro_details {
+    width: 190px;
+    height: auto;
+}
+/* 3rd Column */
+#fixed_bg_2 {
+    width: 530px;
+    height: auto;
+}
+.column_3 {
+    width: 350px;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    box-shadow: 2px 0 5px #888;
+}
+.place_order_btn {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    text-align: center;
+}
+.product_content {
+    width: 190px;
+    height: auto;
+}
+.product_content input {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.product_content button {
+    color: #ff8000;
+    border: 2px solid #ff8000;
+    width: 28px;
+    height: 28px;
+    background: none;
+
+}
+

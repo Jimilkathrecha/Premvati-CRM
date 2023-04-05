@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="/CSS/global.css">
+    <link rel="stylesheet" href="/CSS/Stock-in.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <!-- Bootstarp Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous">
+        </script>
+    <!-- Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- Download PDF -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+</head>
+
+<body>
+
+    <section class="body_content d-flex">
+        <!-- Menubar -->
+        <section class="menubar bg-white position-fixed">
+            <div class="menubar_con position-relative p-1">
+                <div class="menu_list">
+                    <ul>
+                        <a href="">
+                            <li class="py-2 m-1">
+                                <img class="orange_icon" src="/img/premvati_icons/Dash board orange.png">
+                                <img class="mx-auto white_icon" src="/img/premvati_icons/Dash board white.png">
+                                Dashboard
+                            </li>
+                        </a>
+                        <a href="Stock-in.html">
+                            <li class="py-2 m-1">
+                                <img class="orange_icon" src="/img/premvati_icons/Stock in orange.png">
+                                <img class="mx-auto white_icon" src="/img/premvati_icons/Stock in white.png">
+                                Stock In
+                            </li>
+                        </a>
+                        <a href="Stock-out.html">
+                            <li class="py-2 m-1">
+                                <img class="orange_icon" src="/img/premvati_icons/Stock out orange.png">
+                                <img class="mx-auto white_icon" src="/img/premvati_icons/Stock out white.png">
+                                Stock Out
+                            </li>
+                        </a>
+                        <a href="order_req.html">
+                            <li class="py-2 m-1">
+                                <img class="orange_icon" src="/img/premvati_icons/order_req_orange.png">
+                                <img class="mx-auto white_icon" src="/img/premvati_icons/order_req_white.png">
+                                Order Request
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="py-2 m-1">
+                                <img class="orange_icon" src="/img/premvati_icons/Accounting orange.png">
+                                <img class="mx-auto white_icon" src="/img/premvati_icons/Accounting White.png">
+                                Accounting
+                            </li>
+                        </a>
+                        <a href="Food_menu.html">
+                            <li class="py-2 m-1">
+                                <img class="orange_icon" src="/img/premvati_icons/food menu orange.png">
+                                <img class="mx-auto white_icon" src="/img/premvati_icons/food menu white.png">
+                                Food Menu
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="py-2 m-1">
+                                <img class="orange_icon" src="/img/premvati_icons/Transaction orange.png">
+                                <img class="mx-auto white_icon" src="/img/premvati_icons/Transaction White.png">
+                                Transaction
+                            </li>
+                        </a>
+                        <a class="active_menubar" href="Users.html">
+                            <li class="py-2 m-1">
+                                <img class="orange_icon" src="/img/premvati_icons/user orange.png">
+                                <img class="mx-auto white_icon" src="/img/premvati_icons/user White.png">
+                                Users
+                            </li>
+                        </a>
+                        <a href="Feedback.html">
+                            <li class="py-2 m-1">
+                                <img class="orange_icon" src="/img/premvati_icons/Feedback orange.png">
+                                <img class="mx-auto white_icon" src="/img/premvati_icons/Feedback white.png">
+                                Feedback
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div id="fixed_bg_1"></div>
+
+        <!-- Content -->
+        <section class="content py-4 px-5">
+            <div class="d-flex justify-content-between">
+                <h3 class="mt-2"><b>Manage User</b></h3>
+                <button type="button" class="btn bg-white py-1 px-2 m-1 position-relative">
+                    <i class="fa-regular fa-bell fs-5 px-1"></i>
+                    <span
+                        class="button_bg position-absolute top-0 start-100 translate-middle px-2 text-white border border-light rounded-circle"
+                        style="font-size: 14px;">
+                        1 <span class="visually-hidden"></span>
+                    </span>
+                </button>
+            </div>
+
+            <div class="content_bar d-flex justify-content-between mt-3">
+                <div class="d-flex gap-3">
+                    <button class="p-2 px-5 border rounded-2 bg-white">All Users</button>
+                    <button class="p-2 px-5 border rounded-2 bg-white">8 Total</button>
+                </div>
+                <div class="d-flex gap-3">
+                    <input class="border rounded-2 p-2" type="text" id="myInput" onkeyup="myFunction()"
+                        placeholder="Search the item by name or ItemCode" />
+                    <button class="button_bg p-2 px-4 border-0 rounded-2 text-white">Add New User</button>
+                </div>
+            </div>
+
+            <div class="tab-content">
+                <div class="table_div tab-pane fade show active" id="vol1">
+                    <div class="content_table mt-3">
+                        <table>
+                            <tr>
+                                <th>No.</th>
+                                <th>User Name</th>
+                                <th>Name</th>
+                                <th>Roll</th>
+                                <th>Edit</th>
+                                <th style="border-right: none;">Delete</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>XYZ</td>
+                                <td><i class="fa-solid fa-user pe-3"></i>XYZ Pqr</td>
+                                <td></td>
+                                <td><i class="fa-solid fa-pen-to-square"></i></td>
+                                <td><i class="fa-solid fa-trash"></i></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>XYZ</td>
+                                <td><i class="fa-solid fa-user pe-3"></i>XYZ Pqr</td>
+                                <td></td>
+                                <td><i class="fa-solid fa-pen-to-square"></i></td>
+                                <td><i class="fa-solid fa-trash"></i></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>XYZ</td>
+                                <td><i class="fa-solid fa-user pe-3"></i>XYZ Pqr</td>
+                                <td></td>
+                                <td><i class="fa-solid fa-pen-to-square"></i></td>
+                                <td><i class="fa-solid fa-trash"></i></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="vol2">
+                    <div class="content_table mt-3">
+                        <table>
+                            <tr>
+                                <th>No.</th>
+                                <th>User Name</th>
+                                <th>Name</th>
+                                <th>Roll</th>
+                                <th>Edit</th>
+                                <th style="border-right: none;">Delete</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>XYZ</td>
+                                <td><i class="fa-solid fa-user pe-3"></i>XYZ Pqr</td>
+                                <td></td>
+                                <td><i class="fa-solid fa-pen-to-square"></i></td>
+                                <td><i class="fa-solid fa-trash"></i></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>XYZ</td>
+                                <td><i class="fa-solid fa-user pe-3"></i>XYZ Pqr</td>
+                                <td></td>
+                                <td><i class="fa-solid fa-pen-to-square"></i></td>
+                                <td><i class="fa-solid fa-trash"></i></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>XYZ</td>
+                                <td><i class="fa-solid fa-user pe-3"></i>XYZ Pqr</td>
+                                <td></td>
+                                <td><i class="fa-solid fa-pen-to-square"></i></td>
+                                <td><i class="fa-solid fa-trash"></i></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="vol3">
+                    <div class="content_table mt-3">
+                        <table>
+                            <tr>
+                                <th>No.</th>
+                                <th>User Name</th>
+                                <th>Name</th>
+                                <th>Roll</th>
+                                <th>Edit</th>
+                                <th style="border-right: none;">Delete</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>XYZ</td>
+                                <td><i class="fa-solid fa-user pe-3"></i>XYZ Pqr</td>
+                                <td></td>
+                                <td><i class="fa-solid fa-pen-to-square"></i></td>
+                                <td><i class="fa-solid fa-trash"></i></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>XYZ</td>
+                                <td><i class="fa-solid fa-user pe-3"></i>XYZ Pqr</td>
+                                <td></td>
+                                <td><i class="fa-solid fa-pen-to-square"></i></td>
+                                <td><i class="fa-solid fa-trash"></i></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>XYZ</td>
+                                <td><i class="fa-solid fa-user pe-3"></i>XYZ Pqr</td>
+                                <td></td>
+                                <td><i class="fa-solid fa-pen-to-square"></i></td>
+                                <td><i class="fa-solid fa-trash"></i></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="nav justify-content-between d-flex mt-3">
+                <div>
+                    <li><button class="py-2 px-4 border rounded-2 bg-white" data-bs-toggle="tab" data-bs-target="#vol1">
+                            <i class="fa-solid fa-angle-left pe-2"></i>Previous</button></li>
+                </div>
+                <div class="d-flex change_btn">
+                    <li><button class="active border-0 bg-transparent" data-bs-toggle="tab" data-bs-target="#vol1">
+                            1</button></li>
+                    <li><button class="border-0 bg-transparent" data-bs-toggle="tab" data-bs-target="#vol2">
+                            2</button></li>
+                    <li><button class="border-0 bg-transparent" data-bs-toggle="tab" data-bs-target="#vol3">
+                            3</button></li>
+                </div>
+                <div>
+                    <li><button class="py-2 px-4 border rounded-2 bg-white" data-bs-toggle="tab" data-bs-target="#vol3">
+                            Next <i class="fa-solid fa-angle-right ps-2"></i></button></li>
+                </div>
+            </ul>
+
+        </section>
+
+    </section>
+    <!------------------>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

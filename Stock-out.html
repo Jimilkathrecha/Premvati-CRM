@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock-out</title>
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="/CSS/global.css">
+    <link rel="stylesheet" href="/CSS/Stock-in.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <!-- Bootstarp Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous">
+        </script>
+    <!-- Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- Download PDF -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+</head>
+
+<body>
+
+    <section class="body_content d-flex">
+        <!-- Menubar -->
+        <section class="menubar bg-white position-fixed">
+            <div class="menubar_con position-relative p-1">
+                <div class="menu_list">
+                    <ul>
+                        <a href="">
+                            <li class="py-2 m-1">
+                                <img class="orange_icon" src="/img/premvati_icons/Dash board orange.png">
+                                <img class="mx-auto white_icon" src="/img/premvati_icons/Dash board white.png">
+                                Dashboard
+                            </li>
+                        </a>
+                        <a href="Stock-in.html">
+                            <li class="py-2 m-1">
+                                <img class="orange_icon" src="/img/premvati_icons/Stock in orange.png">
+                                <img class="mx-auto white_icon" src="/img/premvati_icons/Stock in white.png">
+                                Stock In
+                            </li>
+                        </a>
+                        <a class="active_menubar" href="Stock-out.html">
+                            <li class="py-2 m-1">
+                                <img class="orange_icon" src="/img/premvati_icons/Stock out orange.png">
+                                <img class="mx-auto white_icon" src="/img/premvati_icons/Stock out white.png">
+                                Stock Out
+                            </li>
+                        </a>
+                        <a href="order_req.html">
+                            <li class="py-2 m-1">
+                                <img class="orange_icon" src="/img/premvati_icons/order_req_orange.png">
+                                <img class="mx-auto white_icon" src="/img/premvati_icons/order_req_white.png">
+                                Order Request
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="py-2 m-1">
+                                <img class="orange_icon" src="/img/premvati_icons/Accounting orange.png">
+                                <img class="mx-auto white_icon" src="/img/premvati_icons/Accounting White.png">
+                                Accounting
+                            </li>
+                        </a>
+                        <a href="Food_menu.html">
+                            <li class="py-2 m-1">
+                                <img class="orange_icon" src="/img/premvati_icons/food menu orange.png">
+                                <img class="mx-auto white_icon" src="/img/premvati_icons/food menu white.png">
+                                Food Menu
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="py-2 m-1">
+                                <img class="orange_icon" src="/img/premvati_icons/Transaction orange.png">
+                                <img class="mx-auto white_icon" src="/img/premvati_icons/Transaction White.png">
+                                Transaction
+                            </li>
+                        </a>
+                        <a href="Users.html">
+                            <li class="py-2 m-1">
+                                <img class="orange_icon" src="/img/premvati_icons/user orange.png">
+                                <img class="mx-auto white_icon" src="/img/premvati_icons/user White.png">
+                                Users
+                            </li>
+                        </a>
+                        <a href="Feedback.html">
+                            <li class="py-2 m-1">
+                                <img class="orange_icon" src="/img/premvati_icons/Feedback orange.png">
+                                <img class="mx-auto white_icon" src="/img/premvati_icons/Feedback white.png">
+                                Feedback
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div id="fixed_bg_1"></div>
+
+        <!-- Content -->
+        <section class="content py-4 px-5">
+            <div class="d-flex justify-content-between">
+                <h3 class="mt-2"><b>Stock Out</b></h3>
+                <button type="button" class="btn bg-white py-1 px-2 m-1 position-relative">
+                    <i class="fa-regular fa-bell fs-5 px-1"></i>
+                    <span
+                        class="button_bg position-absolute top-0 start-100 translate-middle px-2 text-white border border-light rounded-circle"
+                        style="font-size: 14px;">
+                        1 <span class="visually-hidden"></span>
+                    </span>
+                </button>
+            </div>
+            <div class="menu_list menu_list_bar mt-2">
+                <ul class="d-flex">
+                    <a href="" class="active">
+                        <li class="py-2 px-4 m-1">All</li>
+                    </a>
+                    <a href="">
+                        <li class="py-2 px-4 m-1">Kalawad Road</li>
+                    </a>
+                    <a href="">
+                        <li class="py-2 px-4 m-1">Dholakiya</li>
+                    </a>
+                    <a href="">
+                        <li class="py-2 px-4 m-1">Mavdi</li>
+                    </a>
+                    <a href="">
+                        <li class="py-2 px-4 m-1">Pramukh vatika</li>
+                    </a>
+                    <a href="">
+                        <li class="py-2 px-4 m-1">Sraddhapark</li>
+                    </a>
+                    <a href="">
+                        <li class="py-2 px-4 m-1">PramukhRaj</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="content_bar d-flex gap-2 mt-3">
+                <input class="border rounded-2 p-2" type="text" name="" id=""
+                    placeholder="Search the item by name or #ItemCode" />
+                <button class="button_bg p-2 px-4 border-0 rounded-2 text-white">Search</button>
+                <input class="border rounded-2 p-2 px-3" type="date" name="dob" data-placeholder="Custom Date" required
+                    aria-required="true" />
+                <select style="width: 10%;" class="border form-select" aria-label="Default select example">
+                    <option selected>Today</option>
+                    <option value="1">Yesterday</option>
+                </select>
+                <button class="p-2 px-4 border rounded-2 bg-white">Download
+                    <img class="ps-2" src="/img/download.svg" alt="">
+                </button>
+                <button class="p-2 px-4 border rounded-2 bg-white" style="color:#db3f3f">Delete
+                    <i class="fa-solid fa-trash ps-3"></i></button>
+            </div>
+
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="vol1">
+                    <div class="content_table mt-3">
+                        <table id="myTable2">
+                            <tr>
+                                <th></th>
+                                <th>No.</th>
+                                <th>Date</th>
+                                <th>Item Code</th>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Quantity</th>
+                                <th>Exp. Date</th>
+                                <th>Mfg. Cost</th>
+                                <th>Price</th>
+                                <th style="border-right: none;">Edit</th>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>1</td>
+                                <td>11 March 23</td>
+                                <td>#121</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>2</td>
+                                <td>11 March 23</td>
+                                <td>#122</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>3</td>
+                                <td>11 March 23</td>
+                                <td>#123</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>4</td>
+                                <td>11 March 23</td>
+                                <td>#124</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>5</td>
+                                <td>11 March 23</td>
+                                <td>#12</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>6</td>
+                                <td>11 March 23</td>
+                                <td>#12</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>7</td>
+                                <td>11 March 23</td>
+                                <td>#12</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>8</td>
+                                <td>11 March 23</td>
+                                <td>#12</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>9</td>
+                                <td>11 March 23</td>
+                                <td>#12</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>10</td>
+                                <td>11 March 23</td>
+                                <td>#12</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="vol2">
+                    <div class="content_table mt-3">
+                        <table id="myTable2">
+                            <tr>
+                                <th></th>
+                                <th>No.</th>
+                                <th>Date</th>
+                                <th>Item Code</th>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Quantity</th>
+                                <th>Exp. Date</th>
+                                <th>Mfg. Cost</th>
+                                <th>Price</th>
+                                <th style="border-right: none;">Edit</th>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>11</td>
+                                <td>11 March 23</td>
+                                <td>#121</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>12</td>
+                                <td>11 March 23</td>
+                                <td>#122</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>13</td>
+                                <td>11 March 23</td>
+                                <td>#123</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>14</td>
+                                <td>11 March 23</td>
+                                <td>#124</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>15</td>
+                                <td>11 March 23</td>
+                                <td>#12</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>16</td>
+                                <td>11 March 23</td>
+                                <td>#12</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>17</td>
+                                <td>11 March 23</td>
+                                <td>#12</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>18</td>
+                                <td>11 March 23</td>
+                                <td>#12</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>19</td>
+                                <td>11 March 23</td>
+                                <td>#12</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>20</td>
+                                <td>11 March 23</td>
+                                <td>#12</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="vol3">
+                    <div class="content_table mt-3">
+                        <table id="myTable2">
+                            <tr>
+                                <th></th>
+                                <th>No.</th>
+                                <th>Date</th>
+                                <th>Item Code</th>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Quantity</th>
+                                <th>Exp. Date</th>
+                                <th>Mfg. Cost</th>
+                                <th>Price</th>
+                                <th style="border-right: none;">Edit</th>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>11</td>
+                                <td>11 March 23</td>
+                                <td>#121</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>12</td>
+                                <td>11 March 23</td>
+                                <td>#122</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>13</td>
+                                <td>11 March 23</td>
+                                <td>#123</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>14</td>
+                                <td>11 March 23</td>
+                                <td>#124</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>15</td>
+                                <td>11 March 23</td>
+                                <td>#12</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>16</td>
+                                <td>11 March 23</td>
+                                <td>#12</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>17</td>
+                                <td>11 March 23</td>
+                                <td>#12</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>18</td>
+                                <td>11 March 23</td>
+                                <td>#12</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>19</td>
+                                <td>11 March 23</td>
+                                <td>#12</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check-item"></td>
+                                <td>20</td>
+                                <td>11 March 23</td>
+                                <td>#12</td>
+                                <td>Aloo Mutter Sandwich</td>
+                                <td>Sandwich</td>
+                                <td>15</td>
+                                <td>12 March 23</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td> <i class="fa-solid fa-pen-to-square"></i></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="nav justify-content-between d-flex mt-3">
+                <div>
+                    <li><button class="py-2 px-4 border rounded-2 bg-white" data-bs-toggle="tab" data-bs-target="#vol1">
+                            <i class="fa-solid fa-angle-left pe-2"></i>Previous</button></li>
+                </div>
+                <div class="d-flex change_btn">
+                    <li><button class="active border-0 bg-transparent" data-bs-toggle="tab" data-bs-target="#vol1">
+                            1</button></li>
+                    <li><button class="border-0 bg-transparent" data-bs-toggle="tab" data-bs-target="#vol2">
+                            2</button></li>
+                    <li><button class="border-0 bg-transparent" data-bs-toggle="tab" data-bs-target="#vol3">
+                            3</button></li>
+                </div>
+                <div>
+                    <li><button class="py-2 px-4 border rounded-2 bg-white" data-bs-toggle="tab" data-bs-target="#vol3">
+                            Next <i class="fa-solid fa-angle-right ps-2"></i></button></li>
+                </div>
+            </ul>
+
+        </section>
+
+    </section>
+    <!------------------>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
