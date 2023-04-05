@@ -3,13 +3,16 @@
 }
 /* Content */
 .product {
-    width: 45%;
+    width: 29%;
     height: 130px;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.20);
     background-color: white;
 }
 .product h5 {
-    font-size: 19px;
+    font-size: 1.1vw;
+}
+.product strong {
+    font-size: 1.1vw;
 }
 .product:hover {
     background-color: #ff8000;
