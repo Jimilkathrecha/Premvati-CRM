@@ -1,0 +1,101 @@
+.right-sidebar {
+    width: 100%;
+    background: #f6f6f6;
+    padding: 12px 15px;
+}
+
+.add-qty-input {
+    outline: none;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #fff;
+    caret-color: #d1cccc;
+    color: #d1cccc;
+    padding: 10px 15px;
+    border: 2px solid transparent;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    margin-right: 1px;
+    transition: all 0.2s ease;
+    border: 1px solid #eee;
+    max-width: 480px;
+}
+.add-qty-input::placeholder {
+    color: #d1cccc;
+}
+.add-qty-input:hover {
+    border: 2px solid rgba(255, 255, 255, 0.16);
+}
+
+.add-qty-input:focus {
+    border: 2px solid #a970ff;
+    background-color: #0e0e10;
+}
+.Qty_btn {
+    outline: 0;
+    border: 1px solid #eee;
+    padding: 7px 15px;
+    background: #fff;
+    max-width: 100px;
+    width: 100%;
+}
+
+.search_btn {
+    border: none;
+    cursor: pointer;
+    background-color: #ff8000;
+    border-radius: 0 50px 50px 0;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.search_btn:hover {
+    background-color: #ff8000;
+}
+
+.dropdown{
+    border-radius: 5px;
+    background-color: #fff !important;
+}
+.btn.show {
+    color: #35435e !important;
+    background-color: #fff !important;
+}
+.btn:hover {
+    color: #35435e !important;
+}
+.dropdown-toggle::after {
+    color: #35435e;
+}
+.user-plus-btn{
+    border-radius: 5px;
+    border: 1px solid #eee;
+    padding: 10px 12px;
+    background-color: #fff !important;
+
+}
+
+.add-remark-input{
+    width: 100%;
+    max-width: 260px;
+    padding: 10px 15px;
+    border: 1px solid #eee;
+    font-size: 15px;
+    color: #adadad;
+}
+.offer-btn{
+    border: 1px solid #ff8000;
+    background: #ff8000;
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.table>thead {
+   background: #ff8000;
+   color: #fff;
+}

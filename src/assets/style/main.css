@@ -1,0 +1,21 @@
+.main{
+    background: #fcfcfe;
+    width: 100%;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    color: #444;
+    height: 100px;
+}
+.soup-btn {
+    background-color: #fff;
+    color: #4a5874;
+    border-radius: 5px;
+    padding: 15px 4px;
+    font-size: 15px;
+    max-width: 200px;
+    width: 100%;
+    border: 1px solid #eeee;
+}

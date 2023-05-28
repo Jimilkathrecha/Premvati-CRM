@@ -1,0 +1,33 @@
+.btn-ul {
+    background: #f6f6f6;
+    width: 20%;
+    height: 75vh;
+    overflow-y: scroll
+}
+
+.btn-list{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    /* color: #ff8000; */
+    color: #303e58;
+    font-weight: Bold;
+    transition: all 0.5s;
+    width: 200px;
+    font-size: 13px;
+    height: 55px;
+}
+
+.btn-list:hover {
+    background-color: #ff8000;
+    box-shadow: 0 0 20px #6fc5ff50;
+    color: #fff;
+}
+
+.active {
+    background-color: #ff8000;
+    transition: all 0.25s;
+    box-shadow: none;
+    color: #fff;
+}

@@ -1,0 +1,20 @@
+
+.bg-white{
+    background: #fff;
+}
+.bg-gark-white {
+    background: #f6f6f6;
+}
+
+.bg-dark-blue {
+    background: #ff8000 !important;
+}
+.main-top-border{
+border-top: 1px solid #FFF;
+}
+.bg-green{
+    background: #49bb37 !important;
+}
+.h-85{
+    height: 85%;
+}
